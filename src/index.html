@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body class="font-[Roboto] bg-white">
+
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[100%] mx-auto font-bold md:fixed top-0  bg-white border-2">
+            <div class="inline-flex ml-6">
+                <img class="w-20" src="img/logo.PNG" alt="...">
+                <h1 class="mt-4 text-3xl font-extrabold">VetFinder</h1>
+            </div>
+            <div class="nav-links  md:static absolute bg-white md:min-h-fit min-h-[26vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ml-auto" style="top: -100%;">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-12">
+                    <li>
+                        <a class="hover:text-gray-500 ml-16 text-lg" href="#">Clinics</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500 ml-16 text-lg" href="#">Adopt</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500 ml-16 text-lg" href="#">About us</a>
+                    </li>
+                </ul>
+            </div>
+                <div class="flex items-center gap-6">   
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                </div> 
+        </nav>
+    </header>
+    <div class="bg-white w-full h-[500px] md:h-[650px]">
+        <div class="w-full h-[650px] flex-col-reverse inline-flex md:flex-row mt-96 md:mt-0">
+            <div class=" w-full mx-auto md:w-[55%] md:ml-10 lg:ml-20 xl:ml-32 2xl:ml-56 2xl:w-[50%]">
+                <div class="w-auto md:max-w-[600px] mt-32">
+                    <div class="font-black text-2xl text-center md:text-left">Your pet's perfect vet, found effortlessly with Vetfinder.</div>
+                    <div class="font-light hidden md:block">At Vetfinder, our mission is simple - to ensure every pet receives exceptional care. We're dedicated to connecting you with trusted veterinarians who prioritize the well-being of your furry family members.
+                     </div>
+                </div>
+
+                <div class="w-[400px] mx-auto md:mx-0 md:ml-1 md:w-[390px] mt-11 h-44 bg-white border-[1px] border-black rounded-lg p-3">
+
+                  
+                  <div class="inline-flex gap-10  w-[100%]">
+                    <div class=" relative h-10 w-[170px]">
+                        <select
+                          class=" peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                          <option value="vilnius">Vilnius</option>
+                          <option value="kaunas">Kaunas</option>                        
+                        </select>
+                        <label
+                          class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                          Select a City
+                        </label>
+                      </div>
+
+                   
+                      <div class="relative h-10 w-[170px]">
+                        <select
+                          class=" peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                          <option value="vilnius">Vilnius</option>
+                          <option value="kaunas">Kauas</option>                        
+                        </select>
+                        <label
+                          class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                          Select a City
+                        </label>
+                      </div>
+                  </div>
+
+                  <select class="py-3 px-4 pe-9 block w-full border-2 border-gray-500 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                    <option selected>Open this select menu</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                      
+
+
+
+                       
+                </div>
+            </div>  
+
+            <div class="w-full md:w-[45%] 2xl:w-[50%]">
+                <img class="flex justify-center items-center mx-auto md:mt-[90px] lg:mt-20 mt-10  w-auto md:min-w-[200px]" src="img/48d5bf440738431914c0.png">
+            </div>
+
+
+
+        </div>
+
+
+      <div class="bg-gray-200 w-full  h-[900px]  md:h-72 mt-28 md:mt-0 inline-flex flex-col md:flex-row mx-auto">
+        <div class="mx-auto min-w-[400px] p-10"><a href="#">
+          <img class="w-[400px] h-[250px] min-w-[400px] rounded-lg " src="img/pitbull 1.jpg"></a>
+        </div>
+        <div class="mx-auto min-w-[400px] p-10"><a href="#">
+          <img class="w-[400px] h-[250px] min-w-[400px] rounded-lg" src="img/juan-gomez-0quBpwn_fNM-unsplash.jpg"></a>
+        </div>
+        <div class="mx-auto min-w-[400px] p-10"><a href="#">
+          <img class="w-[400px] h-[250px] min-w-[400px] rounded-lg" src="img/about us.jpg"></a>
+        </div>
+      </div>
+
+    </div> 
+
+    
+
+
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
