@@ -11,13 +11,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
 
 </head>
-<body class="font-[Roboto] bg-white">
+<body class="font-[Roboto] bg-white h-[100rem]">
 
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[100%] mx-auto font-bold md:fixed top-0  bg-white border-2">
+    <header class="bg-white md:relative md:z-50 z-0" >
+        <nav class="flex justify-between items-center w-[100%] mx-auto font-bold md:fixed top-0  bg-white border-b-2">
             <div class="inline-flex ml-6">
                 <img class="w-20" src="img/logo.PNG" alt="...">
-                <h1 class="mt-4 text-3xl font-extrabold">VetFinder</h1>
+                <h1 class="mt-4 text-3xl font-extrabold hidden md:block">VetFinder</h1>
             </div>
             <div class="nav-links  md:static absolute bg-white md:min-h-fit min-h-[26vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ml-auto" style="top: -100%;">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-12">
@@ -49,10 +49,10 @@
                 <div class="w-[400px] mx-auto md:mx-0 md:ml-1 md:w-[390px] mt-11 h-44 bg-white border-[1px] border-black rounded-lg p-3">
 
                   
-                  <div class="inline-flex gap-10  w-[100%]">
+                  <div class="inline-flex gap-10  w-[100%] mt-3">
                     <div class=" relative h-10 w-[170px]">
                         <select
-                          class=" peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                          class=" peer h-full w-full rounded-[7px] border-2 border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
                           <option value="vilnius">Vilnius</option>
                           <option value="kaunas">Kaunas</option>                        
                         </select>
@@ -65,28 +65,40 @@
                    
                       <div class="relative h-10 w-[170px]">
                         <select
-                          class=" peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
-                          <option value="vilnius">Vilnius</option>
-                          <option value="kaunas">Kauas</option>                        
+                          class=" peer h-full w-full rounded-[7px] border-2 border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">                         
+                          <option value="cat">Cat</option> 
+                          <option value="dog">Dog</option>  
+                          <option value="cat">Hamster</option> 
+                          <option value="cat">Bird</option> 
+                          <option value="cat">Fish</option>                      
                         </select>
                         <label
                           class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                          Select a City
+                          Select your pet
                         </label>
                       </div>
                   </div>
 
-                  <select class="py-3 px-4 pe-9 block w-full border-2 border-gray-500 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
-                    <option selected>Open this select menu</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                  </select>
-                      
+                 <div class="inline-flex gap-10  w-[100%] mt-3">
+                  <div class="relative h-10 w-[170px] mt-6">
+                    <select
+                      class=" peer h-full w-full rounded-[7px] border-2 border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                      <option value="vilnius">Vilnius</option>
+                      <option value="kaunas">Kauas</option>                        
+                    </select>
+                    <label
+                      class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                      Select a procedure
+                    </label>  
+                  </div>
 
+                  <!-- <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Dark</button> -->
+                  <button class="border-[2px] bg-gray-50 border-black mt-6 w-40 h-10 rounded-[7px] hover:bg-yellow-50">Search</button>
 
+              </div> 
 
-                       
+                 
+
                 </div>
             </div>  
 
@@ -99,16 +111,27 @@
         </div>
 
 
-      <div class="bg-gray-200 w-full  h-[900px]  md:h-72 mt-28 md:mt-0 inline-flex flex-col md:flex-row mx-auto">
-        <div class="mx-auto min-w-[400px] p-10"><a href="#">
-          <img class="w-[400px] h-[250px] min-w-[400px] rounded-lg " src="img/pitbull 1.jpg"></a>
+      <div class="bg-gray-100 w-full  h-72  md:h-96 mt-28 md:mt-0 inline-flex flex-col md:flex-row mx-auto gap-x-5 	">
+
+        <div class="mx-auto min-w-[400px] p-10 relative text-white "><a href="#">
+          <img class="w-[400px] h-[250px] md:w-[500px] md:h-[300px] min-w-[400px] rounded-lg brightness-75 hover:brightness-50 " src="img/pitbull 1.jpg">
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Clinics</p>  </a>
+          
         </div>
-        <div class="mx-auto min-w-[400px] p-10"><a href="#">
-          <img class="w-[400px] h-[250px] min-w-[400px] rounded-lg" src="img/juan-gomez-0quBpwn_fNM-unsplash.jpg"></a>
+
+        <div class="mx-auto min-w-[400px] p-10 relative text-white "><a href="#">
+          
+          <img class="w-[400px] h-[250px] md:w-[500px] md:h-[300px] min-w-[400px] rounded-lg brightness-75 hover:brightness-50" src="img/juan-gomez-0quBpwn_fNM-unsplash.jpg">
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Adopt</p></a>
+                  
         </div>
-        <div class="mx-auto min-w-[400px] p-10"><a href="#">
-          <img class="w-[400px] h-[250px] min-w-[400px] rounded-lg" src="img/about us.jpg"></a>
+
+        <div class="mx-auto min-w-[400px] p-10 relative text-white"><a href="#">
+          <img class="w-[400px] md:w-500px h-[250px] md:w-[500px] md:h-[300px] min-w-[400px] rounded-lg brightness-75 hover:brightness-50" src="img/about us.jpg">
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">About us</p></a>
+          
         </div>
+
       </div>
 
     </div> 
