@@ -11,5 +11,15 @@ function onToggleMenu(e){
     else{
         divElement.style.top = '-100%';
     }      
-}
+};
+
+
+
+document.getElementById('searchButton').addEventListener('click', function(){
+    const selectCity = document.getElementById('selectCity').value;
+    const selectPet = document.getElementById('selectPet').value;
+    const selectProcedure = document.getElementById('selectProcedure').value;
+
+    console.log("Selected values: ", selectCity, selectPet, selectProcedure);
+});
  
