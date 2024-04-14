@@ -10,8 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[0.81.0]/dist/L.Control.Locate.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[0.81.0]/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 </head>
-<body class="font-[Roboto] bg-white h-[100rem] md:h-[67rem]">
+<body class="font-[Roboto] bg-white h-[100rem] md:h-[87rem]">
 
     <header class="bg-white md:relative md:z-50 z-0" >
         <nav class="flex justify-between items-center w-[100%] mx-auto font-bold md:fixed top-0  bg-white border-b-2">
@@ -49,10 +53,10 @@
                      </div>
                 </div>
 
-                <div class="w-[400px] mx-auto md:mx-0 md:ml-3 md:w-[805px] mt-11 h-44 md:h-[4.25rem] bg-white border-[1px]  border-black rounded-lg p-3  md:flex  z-50">
+                <div class="lg:w-[715px] md:w-[680px]  w-[400px] mx-auto md:mx-0 md:ml-3  mt-11 h-44 md:h-[4.25rem] bg-white border-[1px]  border-black rounded-lg p-3  md:flex  z-50">
 
                   
-                  <div class="inline-flex gap-10 md:gap-3 lg:gap-10  w-[100%] mt-3 md:mt-[0rem]">
+                  <div class="inline-flex gap-10 md:gap-3 lg:gap-10   h-16 w-[100%]  md:w-[40%] mt-3 md:mt-[0rem]">
                     <div class=" relative h-11 w-[170px]">
                         <select
                           class=" peer h-full w-full rounded-[7px] border-2 border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" id="selectCity">
@@ -85,7 +89,7 @@
                       </div>
                   </div>
 
-                 <div class="inline-flex gap-3 lg:gap-10  w-[100%] mt-3 md:-mt-6 ml-0 lg:ml-4">
+                 <div class="inline-flex gap-3 lg:gap-10 h-16  w-[110%] md:w-[100%] mt-3 md:-mt-6 md:ml-6 ml-0  lg:ml-6">
                   <div class="relative h-11 w-[170px] mt-6">
                     <select
                       class=" peer h-full w-full rounded-[7px] border-2 border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" id="selectProcedure">
@@ -102,14 +106,19 @@
                     </label>  
                   </div>
 
+                  
                   <!-- <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Dark</button> -->
-                  <button class="border-[2px] bg-gray-50 border-black mt-6 w-40 h-10 rounded-[7px] hover:bg-yellow-50" id="searchButton">Search</button>
+                  <div class="md:-ml-6 -ml-3 mt-[2px] h-11 ">
+                  <button class="border-[2px] bg-gray-50 border-black ml-9  mt-6 w-40 h-10 rounded-[7px] hover:bg-yellow-50" id="searchButton">Search</button>
+                  </div >
+
 
               </div> 
 
-                 
+              
 
                 </div>
+                <div id="map" class="w-[45rem]  h-[20rem] ml-[11px] mt-6 mx-auto rounded  border-[2px] border-black"></div>
             </div>  
 
             <div class="w-full md:w-[45%] 2xl:w-[50%] -z-20" style="background-image: url(img/48d5bf440738431914c0.png`);">
@@ -121,7 +130,7 @@
         </div>
 
 
-      <div class="w-full  h-[61rem]  md:h-96 mt-28 md:mt-0 inline-flex flex-col 2xl:flex-row mx-auto gap-x-5 	">
+      <div class="w-full  h-[61rem]  md:h-96 mt-28 md:mt- inline-flex flex-col 2xl:flex-row mx-auto gap-x-5 	">
 
         <div class="mx-auto  p-10 relative text-white "><a href="map.html">
           <img class="w-[500px] h-[300px] lg:w-[800px] lg:h-[450px] 2xl:w-[600px] 2xl:h-[350px] md:w-[500px]  md:h-[300px] min-w-[350px] rounded-lg brightness-75 hover:brightness-50 transition duration-200 object-cover " src="img/pitbull 1.jpg">
@@ -148,6 +157,7 @@
 
 
     <script src="main.js"></script>
+    <script src="map.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
