@@ -1,4 +1,9 @@
-const map = L.map('map');
+const map = L.map('map', {
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        keyboard: false
+});
 map.setView([54.7286,25.2394], 12);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { // Use the OpenStreetMap tile layer
@@ -14,7 +19,7 @@ seskines: {
             Šeškinės g. 26<br>
             Vilnius`,
   website: 'http://www.vetgyd.lt/',
-  phone: '+867790977'
+  phone: '+867790977',
 },
 drvet: {
   coords: [54.71529, 25.25016],
@@ -232,8 +237,44 @@ vetvila:{
   website:'http://www.vetvila.lt/',
   phone:'+370 601 88240'
 },
+vetuni:{
+    coords:[54.90995,23.88057],
+    title:"Lietuvos Sveikatos Mokslų Universiteto Veterinarijos Akademijos Veterinarijos Fakulteto Stambiųjų Gyvūnų Klinika",
+    address:`<b>Lietuvos Sveikatos Mokslų Universiteto Veterinarijos Akademijos Veterinarijos Fakulteto Stambiųjų Gyvūnų Klinika</b><br>
+    Tilžės g. 18<br>
+    Kaunas`,
+    website:'https://lsmu.lt/apie-lsmu/lsmu-struktura/veterinarijos-akademija/stambiuju-gyvunu-klinika/',
+    phone:'+370 37 327 201'
+}
 // shablon:{
-//     coords:[],
+//     coords:[54.90995,23.88057],
+//     title:"",
+//     address:`<b></b><br>
+//     <br>
+//     Kaunas`,
+//     website:'',
+//     phone:''
+// },
+// shablon:{
+//     coords:[54.90995,23.88057],
+//     title:"",
+//     address:`<b></b><br>
+//     <br>
+//     Kaunas`,
+//     website:'',
+//     phone:''
+// },
+// shablon:{
+//     coords:[54.90995,23.88057],
+//     title:"",
+//     address:`<b></b><br>
+//     <br>
+//     Kaunas`,
+//     website:'',
+//     phone:''
+// },
+// shablon:{
+//     coords:[54.90995,23.88057],
 //     title:"",
 //     address:`<b></b><br>
 //     <br>
@@ -256,5 +297,14 @@ if (vet.coords) { // Check if coords property exists
   .addTo(map);
 }
 }
+
+document.getElementById('change-view-button').addEventListener('click', function() {
+  let selectedCity = document.getElementById('select-city').value;
+  if (selectedCity === 'kaunas') {
+    map.setView([54.9179,23.9389], 11); // Set view to Kaunas
+  } else if (selectedCity === 'vilnius') {
+    map.setView([54.7286,25.2394], 12); // Set view to Vilnius
+  }
+});
 
 L.control.locate().addTo(map);
