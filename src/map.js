@@ -10,8 +10,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', 
 }).addTo(map);
 
+const data = [];
 
-const data = [
+const dataAlmost = [];
+
+const allData = [
   {
     id: 1,
     coords: [54.7162159, 25.2459775],
@@ -20,6 +23,7 @@ const data = [
     website: 'http://www.vetgyd.lt/',
     phone: '+867790977',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 2,
@@ -29,6 +33,7 @@ const data = [
     website: 'http://www.drvet.lt/',
     phone: '+37061112854',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 3,
@@ -38,6 +43,7 @@ const data = [
     website: 'http://www.adletenele.lt/',
     phone:'+37064615030',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 4,
@@ -47,6 +53,7 @@ const data = [
     website: 'http://drvet.lt/',
     phone:'+370 611 41 596',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 5,
@@ -55,7 +62,8 @@ const data = [
     address: `<b>Antakalnio veterinarijos gydykla</b><br>Antakalnio g. 50<br>Vilnius`,
     website: 'http://vetpaslaugos.lt/',
     phone:'+852344522',
-    animalType: 'small'
+    animalType: 'big'
+    ,procedure: 'allergy'
   },
   {
     id: 6,
@@ -65,6 +73,7 @@ const data = [
     website: 'https://www.vetgydykla.lt/',
     phone:'+370 652 51003',
     animalType: 'small'
+    ,procedure: 'surgery'
   },
   {
     id: 7,
@@ -74,6 +83,7 @@ const data = [
     website: 'https://valveta.lt/',
     phone:'+3702304530',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 8,
@@ -83,6 +93,7 @@ const data = [
     website: 'http://www.tarandesvet.lt/',
     phone:'+8 600 42545',
     animalType: 'big'
+    ,procedure: 'surgery'
   },
   {
     id: 9,
@@ -92,6 +103,7 @@ const data = [
     website: 'https://www.vetpulsas.lt/',
     phone:'+370 620 81 292',
     animalType: 'small'
+    ,procedure: 'odontology'
   },
   {
     id: 10,
@@ -100,7 +112,8 @@ const data = [
     address: `<b>Veterinarinės diagnostikos ir chirurgijos klinika</b><br>Gabijos g. 40-53<br>Vilnius`,
     website: 'https://vdcklinika.lt/',
     phone:'+370 636 36 455',
-    animalType: 'small'
+    animalType: 'big'
+    ,procedure: 'allergy'
   },
   {
     id: 11,
@@ -110,6 +123,7 @@ const data = [
     website: 'http://www.greitojizirafa.lt/',
     phone:'+370 606 98886',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 12,
@@ -119,6 +133,7 @@ const data = [
     website: 'http://www.indresgydykla.lt/',
     phone:'+370 5 2387533',
     animalType: 'small'
+    ,procedure: 'surgery'
   },
   {
     id: 13,
@@ -128,6 +143,7 @@ const data = [
     website: 'https://www.vet1.lt/veterinarijos-klinika',
     phone:'+370 671 69828',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 14,
@@ -136,7 +152,8 @@ const data = [
     address: `<b>Buivydiškės Veterinary Clinic</b><br>Justiniškių g. 64<br>Vilnius`,
     website: 'http://bvkklinika.lt/',
     phone:'+866377737',
-    animalType: 'small'
+    animalType: 'big'
+    ,procedure: 'odontology'
   },
   {
     id: 15,
@@ -146,6 +163,7 @@ const data = [
     website: 'http://www.justvetklinika.lt/',
     phone:'+852 400 337',
     animalType: 'small'
+    ,procedure: 'surgery'
   },
   {
     id: 16,
@@ -155,6 +173,7 @@ const data = [
     website:'http://www.vilniausveterinarija.lt/',
     phone:'+370 690 00027',
     animalType: 'small'
+    ,procedure: 'surgery'
   },
   {
     id: 17,
@@ -164,6 +183,7 @@ const data = [
     website:'http://vilniusvet.lt/',
     phone:'+37060625957',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 18,
@@ -173,6 +193,7 @@ const data = [
     website:'https://www.vetcentras.lt/',
     phone:'+37068989355',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 19,
@@ -182,6 +203,7 @@ const data = [
     website:'http://www.vetzaliakalnis.lt/',
     phone:'+8 601 23667',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 20,
@@ -191,6 +213,7 @@ const data = [
     website:'http://www.vetmedcentras.lt/',
     phone:'+8 612 80 004',
     animalType: 'small'
+    ,procedure: 'odontology'
   },
   {
     id: 21,
@@ -200,6 +223,7 @@ const data = [
     website:'http://divaura.lt/',
     phone:'+370 612 55855',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 22,
@@ -209,6 +233,7 @@ const data = [
     website:'http://www.milavet.lt/',
     phone:'+370 (609) 52 784',
     animalType: 'small'
+    ,procedure: 'surgery'
   },
   {
     id: 23,
@@ -218,6 +243,7 @@ const data = [
     website:'http://www.snaucerisvet.lt/',
     phone:'+370 655 55818',
     animalType: 'small'
+    ,procedure: 'regular'
   },
   {
     id: 24,
@@ -226,7 +252,8 @@ const data = [
     address: `<b>Veterinarijos Klinika Siaurio Šnauceris</b><br>Pramonės pr. 36A, Kaunas, 50348 Kauno m. sav.<br>Kaunas`,
     website:'http://www.snaucerisvet.lt/',
     phone:'+370 655 55818',
-    animalType: 'small'
+    animalType: 'big'
+    ,procedure: 'allergy'
   },
   {
     id: 25,
@@ -236,6 +263,7 @@ const data = [
     website:'http://www.vetvila.lt/',
     phone:'+370 601 88240',
     animalType: 'small'
+    ,procedure: 'allergy'
   },
   {
     id: 26,
@@ -244,7 +272,8 @@ const data = [
     address: `<b>Lietuvos Sveikatos Mokslų Universiteto Veterinarijos Akademijos Veterinarijos Fakulteto Stambiųjų Gyvūnų Klinika</b><br>Tilžės g. 18<br>Kaunas`,
     website:'https://lsmu.lt/apie-lsmu/lsmu-struktura/veterinarijos-akademija/stambiuju-gyvunu-klinika/',
     phone:'+370 37 327 201',
-    animalType: 'big'
+    animalType: 'big',
+    procedure: 'regular'
   }
 ];
 // shablon:{
@@ -281,24 +310,66 @@ document.getElementById('change-view-button').addEventListener('click', function
   }
 });
 
-function filterMarkers() {
-  const selectedAnimalType = document.getElementById('selectPet').value;
-  const selectedProcedure = document.getElementById('selectProcedure').value;
 
-  markers.forEach(marker => {
-    const markerElement = document.getElementById(`marker-${vet.id}`);
-    if (marker.animalType === selectedAnimalType && marker.procedure === selectedProcedure) {
-      // Show the marker if it matches the selected criteria
-      markerElement.style.display = 'block';
-    } else {
-      // Hide the marker if it doesn't match the criteria
-      markerElement.style.display = 'none';
-    }
+// Function to add markers to the map based on provided data arrays
+function addMarkersToMap(dataArray) {
+  // Clear existing markers
+  map.eachLayer(layer => {
+      if (layer instanceof L.Marker) {
+          map.removeLayer(layer);
+      }
+  });
+
+  // Add markers based on data array
+  dataArray.forEach(item => {
+      if (item.coords) {
+          L.marker(item.coords, {
+                  title: item.title,
+              })
+              .bindPopup(`${item.address}<br><a href="${item.website}">${item.website}</a><br><a href="tel:${item.phone}">${item.phone}</a>`)
+              .addTo(map);
+      }
   });
 }
 
-document.getElementById('selectPet').addEventListener('change', filterMarkers);
-document.getElementById('selectProcedure').addEventListener('change', filterMarkers);
+// Function to transfer data based on selected criteria
+function transferData() {
+  // Clear existing data arrays
+  data.length = 0;
+  dataAlmost.length = 0;
+
+  // Get selected animal type from select menu
+  const selectedAnimal = document.getElementById('selectPet').value;
+  // Get selected procedure from select menu
+  const selectedProcedure = document.getElementById('selectProcedure').value;
+
+  // Loop through allData to transfer matching items to data or dataAlmost arrays
+  allData.forEach(item => {
+      if (selectedAnimal === 'all' || item.animalType === selectedAnimal) {
+          // Transfer to dataAlmost array if procedure matches
+          if (selectedProcedure === 'any' || item.procedure === selectedProcedure) {
+              data.push(item);
+          } else {
+              dataAlmost.push(item); // Transfer to dataAlmost array
+          }
+      }
+  });
+
+  // Combine data and dataAlmost for big animals
+  if (selectedAnimal === 'big') {
+      data.push(...dataAlmost);
+      dataAlmost.length = 0; // Clear dataAlmost array
+  }
+
+  // Add markers based on updated data arrays
+  addMarkersToMap(data);
+}
+
+// Call transferData function on page load to display all markers initially
+window.addEventListener('load', transferData);
+
+// Add event listener to button to call transferData function when clicked
+document.getElementById('change-view-button').addEventListener('click', transferData);
 
 
 
