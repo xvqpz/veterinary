@@ -1,9 +1,9 @@
 const map = L.map('map');
 map.setView([54.7286,25.2394], 12);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { // Use the OpenStreetMap tile layer
-attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', // Add attribution to comply with OSM's usage policy
-}).addTo(map); // Add the tile layer to the map
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', 
+}).addTo(map);
 
 
 const data = {
@@ -246,10 +246,10 @@ vetvila:{
 };
 
 for (let key in data) {
-const vet = data[key]; // Access the current vet object
+const vet = data[key]; 
 
-if (vet.coords) { // Check if coords property exists
-  L.marker(vet.coords, { // Use vet.coords instead of data.coords
+if (vet.coords) { 
+  L.marker(vet.coords, { 
       title: vet.title,
   })
   .bindPopup(`${vet.address}<br> <a href="${vet.website}">${vet.website}</a><br> <a href="tel:${vet.phone}">${vet.phone}</a>`)
