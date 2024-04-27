@@ -304,23 +304,23 @@ if (vet.coords) {
 document.getElementById('change-view-button').addEventListener('click', function() {
   let selectedCity = document.getElementById('select-city').value;
   if (selectedCity === 'kaunas') {
-    map.setView([54.9179,23.9389], 11); // Set view to Kaunas
+    map.setView([54.9179,23.9389], 11);
   } else if (selectedCity === 'vilnius') {
-    map.setView([54.7286,25.2394], 12); // Set view to Vilnius
+    map.setView([54.7286,25.2394], 12); 
   }
 });
 
 
-// Function to add markers to the map based on provided data arrays
+
 function addMarkersToMap(dataArray) {
-  // Clear existing markers
+
   map.eachLayer(layer => {
       if (layer instanceof L.Marker) {
           map.removeLayer(layer);
       }
   });
 
-  // Add markers based on data array
+
   dataArray.forEach(item => {
       if (item.coords) {
           L.marker(item.coords, {
@@ -332,18 +332,18 @@ function addMarkersToMap(dataArray) {
   });
 }
 
-// Function to transfer data based on selected criteria
+
 function transferData() {
-  // Clear existing data arrays
+
   data.length = 0;
   dataAlmost.length = 0;
 
-  // Get selected animal type from select menu
+
   const selectedAnimal = document.getElementById('selectPet').value;
-  // Get selected procedure from select menu
+
   const selectedProcedure = document.getElementById('selectProcedure').value;
 
-  // Loop through allData to transfer matching items to data or dataAlmost arrays
+
   allData.forEach(item => {
       if (selectedAnimal === 'all' || item.animalType === selectedAnimal) {
           // Transfer to dataAlmost array if procedure matches

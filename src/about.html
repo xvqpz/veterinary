@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="output.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[0.81.0]/dist/L.Control.Locate.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[0.81.0]/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+</head>
+<body class="font-[Roboto] bg-white h-[100rem] md:h-[60rem]">
+
+    <header class="bg-white md:relative md:z-50 z-30" >
+        <nav class="flex justify-between items-center w-[100%] mx-auto font-bold md:fixed top-0  bg-white border-b-2">
+           <a href="index.html">
+            <div class="inline-flex ml-6">
+                <img class="w-20" src="img/logo.PNG" alt="...">
+                <h1 class="mt-4 text-3xl font-extrabold hidden md:block">VetFinder</h1>
+            </div>
+          </a>
+            <div class="nav-links  md:static absolute bg-white md:min-h-fit min-h-[26vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ml-auto" style="top: -100%;">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-12">
+                    <li>
+                        <a class="hover:text-gray-500 ml-16 text-lg" href="map.html">Clinics</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500 ml-16 text-lg" href="https://www.gyvunugloba.lt/en/shelters" target="_blank">Adopt</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500 ml-16 mr-0 md:mr-16 md:ml-10 text-lg" href="about.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+                <div class="flex items-center gap-6">   
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                </div> 
+        </nav>
+    </header>
+
+      <div class=" mt-7 md:mt-40 w-full ">
+        <div class="bg-cyan-900 rounded-lg w-[30rem] h-[45rem] md:w-[40rem] md:h-[35rem] lg:w-[60rem] lg:h-[25rem] mx-auto p-10">
+        <h1 class="text-5xl text-center text-white ">About us</h1>
+        <h4 class="text-xl text-center mx-auto  mt-8 text-white">Hey there! I'm Adam, the creator behind this vet clinic search system. It all started with a simple idea: to make finding the perfect vet for your furry friend easy-peasy. As a solo developer with a love for pets (I've got a fluffy buddy of my own!), I poured my heart and soul into creating this tool.
+
+          No more endless scrolling through random websites or relying on word-of-mouth recommendations. With our system, you can quickly locate vet clinics nearby, read reviews from real pet parents, and even schedule appointments hassle-free.
+          
+          I know how important our pets are to us—they're family! That's why I've designed this platform to be straightforward and user-friendly, because your peace of mind matters.
+          
+          So whether your pup needs a check-up, your kitty's feeling under the weather, or your bunny's being a bit hoppy, we've got you covered.</h4>
+          </div>
+      </div>
+    
+
+      <div class="w-full  h-[61rem]  md:h-96 mt-28 md:mt- inline-flex flex-col 2xl:flex-row mx-auto gap-x-5 	">
+
+        <div class="mx-auto  p-10 relative text-white "><a href="map.html">
+          <img class="w-[500px] h-[300px] lg:w-[800px] lg:h-[450px] 2xl:w-[600px] 2xl:h-[350px] md:w-[500px]  md:h-[300px] min-w-[350px] rounded-lg brightness-75 hover:brightness-50 transition duration-200 object-cover " src="img/pitbull 1.jpg">
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Clinics</p>  </a>          
+        </div>
+
+        <div class="mx-auto  p-10 relative text-white "><a href="https://www.gyvunugloba.lt/en/shelters" target="_blank">
+          
+          <img class="w-[500px] h-[300px] lg:w-[800px] lg:h-[450px] 2xl:w-[600px] 2xl:h-[350px] md:w-[500px]  md:h-[300px] min-w-[350px] rounded-lg brightness-75 hover:brightness-50 transition duration-200 object-cover" src="img/juan-gomez-0quBpwn_fNM-unsplash.jpg">
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Adopt</p></a>             
+        </div>
+
+        <div class="mx-auto  p-10 relative text-white"><a href="#" target="_blank">
+          <img class="w-[500px] h-[300px] lg:w-[800px] lg:h-[450px] 2xl:w-[600px] 2xl:h-[350px] md:w-[500px]  md:h-[300px] min-w-[350px] rounded-lg brightness-75 hover:brightness-50 transition duration-200 object-cover" src="img/about us.jpg">
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">About us</p></a>
+          
+        </div>
+
+      </div>
+
+    </div> 
+
+    
+
+
+    <script src="main.js"></script>
+    <script src="map.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
