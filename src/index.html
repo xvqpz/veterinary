@@ -25,21 +25,21 @@
                 <h1 class="mt-4 text-3xl font-extrabold hidden md:block">VetFinder</h1>
             </div>
           </a>
-            <div class="nav-links  md:static absolute bg-white md:min-h-fit min-h-[26vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ml-auto" style="top: -100%;">
+            <div class="nav-links  md:static absolute bg-white md:bg-transparent md:min-h-fit min-h-[26vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ml-auto" style="top: -100%;">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-12">
                     <li>
-                        <a class="hover:text-gray-500 ml-16 text-lg" href="map.html">Clinics</a>
+                        <a class="hover:text-gray-500 ml-16 text-lg" href="map.html">Klinikos</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500 ml-16 text-lg" href="https://www.gyvunugloba.lt/en/shelters" target="_blank">Adopt</a>
+                        <a class="hover:text-gray-500 ml-16 text-lg break-normal " href="https://www.gyvunugloba.lt/en/shelters" target="_blank">Įsivaikinti</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500 ml-16 mr-0 md:mr-16 md:ml-10 text-lg" href="about.html">About us</a>
+                        <a class="hover:text-gray-500 ml-16 mr-0 md:mr-16 md:ml-10 text-lg break-normal" href="about.html">Apie mus</a>
                     </li>
                 </ul>
             </div>
                 <div class="flex items-center gap-6">   
-                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer block md:hidden"></ion-icon>
                 </div> 
         </nav>
     </header>
@@ -48,8 +48,9 @@
         <div class="w-full h-[650px] flex-col-reverse inline-flex md:flex-row mt-[52rem] md:mt-0">
             <div class=" w-full mx-auto md:w-[55%] md:ml-10 lg:ml-20 xl:ml-32 2xl:ml-56 2xl:w-[50%]">
                 <div class="w-auto md:max-w-[600px] mt-32">
-                    <div class="font-black text-2xl text-center md:text-left">Your pet's perfect vet, found effortlessly with Vetfinder.</div>
-                    <div class="font-light hidden md:block">At Vetfinder, our mission is simple - to ensure every pet receives exceptional care. We're dedicated to connecting you with trusted veterinarians who prioritize the well-being of your furry family members.
+                    <div class="font-black text-2xl text-center md:text-left">Su „Vetfinder“ lengvai rasite puikų veterinarijos gydytoją savo augintiniui.</div>
+                    <div class="font-light hidden md:block">
+                      Mūsų „Vetfinder“ tikslas yra paprastas - užtikrinti, kad kiekvienas augintinis gautų išskirtinę priežiūrą. Siekiame sujungti jus su patikimais veterinarijos gydytojais, kurie teikia pirmenybę jūsų augintinių gerovei.
                      </div>
                 </div>
 
@@ -65,7 +66,7 @@
                         </select>
                         <label
                           class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                          Select a City
+                          Pasirinkite miestą
                         </label>
                       </div>
 
@@ -73,18 +74,18 @@
                       <div class="relative h-11 w-[170px]">
                         <select id="selectPet"
                           class=" peer h-full w-full rounded-[7px] border-2 border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" id="selectPet">                         
-                          <option value="all">Any</option> 
-                          <option value="small">Cat</option> 
-                          <option value="small">Dog</option>  
-                          <option value="small">Hamster</option> 
-                          <option value="small">Bird</option>  
-                          <option value="big">Horse</option>    
-                          <option value="big">Cow</option>    
-                          <option value="big">Sheep</option>                                                        
+                          <option value="all">Visi</option> 
+                          <option value="small">Katinas</option> 
+                          <option value="small">Šuo</option>  
+                          <option value="small">Žiurkėnas</option> 
+                          <option value="small">Paukštis</option>  
+                          <option value="big">Arklys</option>    
+                          <option value="big">Karvė </option>    
+                          <option value="big">Avis</option>                                                        
                         </select>
                         <label
                           class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                          Select your pet
+                          Pasirinkite gyvūną
                         </label>
                       </div>
                   </div>
@@ -93,15 +94,15 @@
                   <div class="relative h-11 w-[170px] mt-6">
                     <select id="selectProcedure"
                       class=" peer h-full w-full rounded-[7px] border-2 border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" id="selectProcedure">
-                      <option value="any">Any</option>
-                      <option value="regular">Routine check up / vaccine / microchip</option>
-                      <option value="odontology">Odontology</option>       
-                      <option value="allergy">Allergies</option>         
-                      <option value="surgery">Surgery</option>                     
+                      <option value="any">Visi</option>
+                      <option value="regular">Įprastinė patikra / skiepai / mikročipas</option>
+                      <option value="odontology">Odontologija</option>       
+                      <option value="allergy">Alergijos</option>         
+                      <option value="surgery">Chirurgija</option>                     
                     </select>
                     <label
                       class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                      Select a procedure
+                      Pasirinkite procedūrą
                     </label>  
                   </div>
 
@@ -133,18 +134,18 @@
 
         <div class="mx-auto  p-10 relative text-white "><a href="map.html">
           <img class="w-[500px] h-[300px] lg:w-[800px] lg:h-[450px] 2xl:w-[600px] 2xl:h-[350px] md:w-[500px]  md:h-[300px] min-w-[350px] rounded-lg brightness-75 hover:brightness-50 transition duration-200 object-cover " src="img/pitbull 1.jpg">
-          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Clinics</p>  </a>          
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Klinikos</p>  </a>          
         </div>
 
         <div class="mx-auto  p-10 relative text-white "><a href="https://www.gyvunugloba.lt/en/shelters" target="_blank">
           
           <img class="w-[500px] h-[300px] lg:w-[800px] lg:h-[450px] 2xl:w-[600px] 2xl:h-[350px] md:w-[500px]  md:h-[300px] min-w-[350px] rounded-lg brightness-75 hover:brightness-50 transition duration-200 object-cover" src="img/juan-gomez-0quBpwn_fNM-unsplash.jpg">
-          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Adopt</p></a>             
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Įsivaikinti augintinį</p></a>             
         </div>
 
         <div class="mx-auto  p-10 relative text-white"><a href="about.html">
           <img class="w-[500px] h-[300px] lg:w-[800px] lg:h-[450px] 2xl:w-[600px] 2xl:h-[350px] md:w-[500px]  md:h-[300px] min-w-[350px] rounded-lg brightness-75 hover:brightness-50 transition duration-200 object-cover" src="img/about us.jpg">
-          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">About us</p></a>
+          <p class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:translate-x-[-50%] text-4xl">Apie mus</p></a>
           
         </div>
 
